@@ -20,6 +20,9 @@ app.use(express.static("public"));
 //rutas
 app.use("/",rutaHome);
 
+//definicion de motor de plantillas
+app.set("view engine","ejs");
+
 //funcion: aviso
 //by: Tade0G
 //def: indica el estado del servidor y su puerto

@@ -5,6 +5,9 @@ let app = express();
 //requerimos path
 let path=require("path");
 
+//requerimos las rutas
+let rutaHome=require("./routes/home-routes.js")
+
 //definimos el puerto
 let puerto="1000";
 
@@ -13,6 +16,9 @@ app.listen(puerto,aviso);
 
 //definimos los lugares de archivos estaticos
 app.use(express.static("public"));
+
+//rutas
+app.use("/",rutaHome);
 
 //funcion: aviso
 //by: Tade0G

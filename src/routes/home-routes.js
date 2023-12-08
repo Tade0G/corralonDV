@@ -9,8 +9,11 @@ router.get("/", home);
 
 //funciones
 
+//funcion:home
+//by:Tade0G
+//def:responde a la ruta del home renderizando el archivo home.ejs
 function home(req,res){
-	res.sendfile(path.resolve(__dirname,"../views/home.html"));
+	res.render(path.resolve(__dirname,"../views/home.ejs"));
 }
 
 module.exports=router;
